@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* === BRAND COLORS (Organic Humanism) === */
+  --color-primary: #00450d;
+  --color-primary-container: #1b5e20;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #90d689;
+  --color-primary-fixed: #acf4a4;
+  --color-primary-fixed-dim: #91d78a;
+  --color-on-primary-fixed: #002203;
+  --color-on-primary-fixed-variant: #0c5216;
+  --color-inverse-primary: #91d78a;
+
+  --color-secondary: #256486;
+  --color-secondary-container: #a0d8ff;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #1f5f81;
+  --color-secondary-fixed: #c7e7ff;
+  --color-secondary-fixed-dim: #94cdf4;
+  --color-on-secondary-fixed: #001e2e;
+  --color-on-secondary-fixed-variant: #004c6c;
+
+  --color-tertiary: #443925;
+  --color-tertiary-container: #5c503a;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #d3c3a7;
+  --color-tertiary-fixed: #f2e0c3;
+  --color-tertiary-fixed-dim: #d5c5a8;
+  --color-on-tertiary-fixed: #231a08;
+  --color-on-tertiary-fixed-variant: #504530;
+
+  /* === SURFACE HIERARCHY === */
+  --color-surface: #fcf9f4;
+  --color-surface-bright: #fcf9f4;
+  --color-surface-dim: #dcdad5;
+  --color-surface-variant: #e5e2dd;
+  --color-surface-tint: #2a6b2c;
+  --color-surface-container: #f0ede8;
+  --color-surface-container-low: #f6f3ee;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #ebe8e3;
+  --color-surface-container-highest: #e5e2dd;
+  --color-on-surface: #1c1c19;
+  --color-on-surface-variant: #41493e;
+  --color-on-background: #1c1c19;
+  --color-background: #fcf9f4;
+  --color-inverse-surface: #31302d;
+  --color-inverse-on-surface: #f3f0eb;
+
+  /* === UTILITY COLORS === */
+  --color-outline: #717a6d;
+  --color-outline-variant: #c0c9bb;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  /* === TYPOGRAPHY (system fonts) === */
+  --font-headline: ui-rounded, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-label: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* === BORDER RADIUS (Organic) === */
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Organic shape for hero image */
+.organic-shape-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Organic gradient for CTAs */
+.organic-gradient {
+  background: linear-gradient(135deg, #00450d 0%, #1b5e20 100%);
 }
