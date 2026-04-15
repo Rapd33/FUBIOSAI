@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Leaf, Droplets, Users2 } from "lucide-react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import type { TeamMember } from "../../data/types";
+import teamData from "../../data/team.json";
 
 export const metadata = {
   title: "Sobre Nosotros | FUBIOSAI",
@@ -9,23 +11,7 @@ export const metadata = {
     "Conoce la historia, visión y equipo de FUBIOSAI — fundación nacida en Suaita, Santander, para la regeneración de ecosistemas y el fortalecimiento comunitario.",
 };
 
-const liderazgo = [
-  {
-    nombre: "Juan Fernando Pulido Mendoza",
-    cargo: "Director Ejecutivo & Co-fundador",
-    foto: "https://lh3.googleusercontent.com/aida-public/AB6AXuDjHSyjf78_Mo_0bNWcE1T7S6xLssFJL5CFjiOFMOUSv_5Wb2VZ00KrOrWIel8VIuMy4ecpSuPViDsJNSgVOIVs_v5ANqo5n8ZHs-T6PRkKZh5R57V-T7yfLX26lj6TNeCrDHvzeO46db5VvArvKQZczRfu6Tgrsfd5CzkqN7RF1pxNMMQkKWcONatyb7cUgzKuSGJK5s_6vbmeJAFEjX15frPW6-sO1B2IYsJghY8PTV-KK6RsVgTkm1xQI-4qqz6a5P89xQVtn3U",
-  },
-  {
-    nombre: "Hernán Felipe Pulido Mendoza",
-    cargo: "Director de Operaciones",
-    foto: "https://lh3.googleusercontent.com/aida-public/AB6AXuCaY0KOYc7eN4QVLyZcQGncpG3otWHgdSWf6pV6NnBqm2VGwWtXl8ensxND9lUI_as18dmmIGu6R_m8O3JYfAP5G1DPa0wdw3YNN1qdaQxGJ1TvJfS5URON_jbliyqP5seYS0TGXsM56oHLSnoJ1VPZKmTulTx4EtsvF8OlEsHAFkgnT1HZ83ZejdMT_impHjVGM_TsBn-98xRuX_XeZ9QNQGNxZEdwThDvP6Jum6OHY0w6q-f4evyWdPsyWo5dtD-mOhoS0de2mOE",
-  },
-  {
-    nombre: "Blanca Estrella Mendoza Barajas",
-    cargo: "Directora Administrativa",
-    foto: "https://lh3.googleusercontent.com/aida-public/AB6AXuDO5dnUaec5oI8LE-O9H0W5YS8nVfBn5ztdkRu3N1MaSDq_WDO--CesGMt3INIyg1AM1duOqE7o_8s7Ji-8T1kvcKBFiC0hLDKzomyveiy9lSHtZiQAftt567m3LAXP8Jra5NRW6ftHJDGpNMczbxlBeGTvKwNDvCEH2PixzuCqEoK6Go8BjbEp-p9atJPmgTaWCUv5tbP955tAg87SM6ft_SH3sBpQX7f2XWuxIZDubsR47Rh5Ha3BGm7fcon8sil1rX8FXb-nKP4",
-  },
-];
+const team: TeamMember[] = teamData;
 
 export default function SobreNosotrosPage() {
   return (
@@ -59,7 +45,7 @@ export default function SobreNosotrosPage() {
                 <img
                   className="w-full h-full object-cover"
                   alt="Paisaje verde de las montañas de Santander Colombia"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-r69zNKS134Ftwkv9dmhuLJGKfbKuT5mEvkzdgvGwfxWZH3qo433XuOpdS7tqnLcED6WEKPo_9CJxjGeMB2KYzuQCTADXQ73CzMVktEAtDMGebfbssxQga3CsqQWN5uUQ9QGjKliTOuJgiQ_mzi1UU5Z-9avfwzsWwUvanhHl6itEiU7Jl-ioBrYB1KdCdoN34qDoTa60y0BnhKRj050hjA1IUHVqBK4OEckjnY2VjAcYlhD95hmmrLskuGWWC-YfyiJnQoYD6Ys"
+                  src="/about/hero-landscape.jpg"
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-surface-container-highest p-8 rounded-xl shadow-xl hidden md:block max-w-60">
@@ -84,7 +70,7 @@ export default function SobreNosotrosPage() {
                   <img
                     className="rounded-xl shadow-lg w-full aspect-video object-cover"
                     alt="Vista aérea de un bosque tropical denso y saludable"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Juoma98KAQm11bASoAkSQ-wLuliy3iXwGDCnFmtckIsWVVCWzGlyUrS3JiVvBOQ8IGl57z6g3EMahyeIRjzE4TGgKhU4Nd-Hl69SL005ffUXdtoh88TsZ8X-X5c2wFUD3LgEtn80OlwsIwsSNwj8vD8fw-l2TPogTcKMAN_eyagZIczIy84qWUVtecPTw3V4jy4JBmNZh6kJ-WD6ZMuQewF1G7rd1zrTK_h4CknmLRbk4ZOMVsPwZADVns10WYSRKVqiEtVRdHE"
+                    src="/about/vision-forest.jpg"
                   />
                   <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary-container rounded-full flex items-center justify-center border-8 border-surface-container-low">
                     <Leaf size={36} className="text-on-primary-container" />
@@ -143,22 +129,27 @@ export default function SobreNosotrosPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {liderazgo.map((persona) => (
-              <div key={persona.nombre} className="group">
+            {team.map((member) => (
+              <div key={member.name} className="group">
                 <div className="bg-surface-container-high rounded-xl aspect-3/4 overflow-hidden mb-6 relative">
                   <img
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                    alt={`Retrato de ${persona.nombre}`}
-                    src={persona.foto}
+                    alt={`Retrato de ${member.name}`}
+                    src={member.photo}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <h3 className="font-headline font-bold text-xl text-primary">
-                  {persona.nombre}
+                  {member.name}
                 </h3>
-                <p className="text-on-surface-variant font-medium">
-                  {persona.cargo}
+                <p className="text-on-surface-variant font-medium mb-2">
+                  {member.role}
                 </p>
+                {member.bio && (
+                  <p className="text-sm text-on-surface-variant/80 leading-relaxed">
+                    {member.bio}
+                  </p>
+                )}
               </div>
             ))}
           </div>

@@ -7,9 +7,12 @@ import {
   Eye,
   ShieldCheck,
   Download,
+  type LucideIcon,
 } from "lucide-react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import type { LegalDocument, AnnualReport } from "../../data/types";
+import legalData from "../../data/legal-docs.json";
 
 export const metadata = {
   title: "Documentos Legales | FUBIOSAI",
@@ -17,38 +20,16 @@ export const metadata = {
     "Repositorio de documentos legales y financieros de FUBIOSAI — transparencia institucional como Entidad Sin Ánimo de Lucro.",
 };
 
-const documentosPrincipales = [
-  {
-    Icon: ScrollText,
-    title: "Acta de Constitución",
-    description:
-      "Documento fundacional que establece el nacimiento jurídico de FUBIOSAI Foundation.",
-    size: "PDF • 2.4 MB",
-  },
-  {
-    Icon: Scale,
-    title: "Estatutos",
-    description:
-      "Reglas de gobernanza, objetivos sociales y estructura organizativa de la entidad.",
-    size: "PDF • 1.8 MB",
-  },
-  {
-    Icon: BadgeCheck,
-    title: "Certificado de Existencia",
-    description:
-      "Cámara de Comercio vigente que acredita la personería jurídica y representación legal.",
-    size: "PDF • 0.9 MB",
-  },
-  {
-    Icon: Landmark,
-    title: "Declaración de Renta",
-    description:
-      "Último ejercicio fiscal presentado ante la DIAN como parte del régimen tributario especial.",
-    size: "PDF • 3.2 MB",
-  },
-];
+const iconMap: Record<string, LucideIcon> = {
+  ScrollText,
+  Scale,
+  BadgeCheck,
+  Landmark,
+};
 
-const informesAnuales = ["Gestión 2023", "Gestión 2022", "Gestión 2021"];
+const documents: LegalDocument[] = legalData.documents;
+const annualReports: AnnualReport[] = legalData.annualReports;
+const nit: string = legalData.nit;
 
 export default function DocumentosLegalesPage() {
   return (
@@ -76,7 +57,7 @@ export default function DocumentosLegalesPage() {
                 Identificación Tributaria
               </p>
               <p className="text-2xl font-headline font-bold text-primary">
-                NIT 902.012.150-0
+                NIT {nit}
               </p>
             </div>
           </div>
@@ -86,33 +67,39 @@ export default function DocumentosLegalesPage() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
           {/* Documentos principales */}
           <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {documentosPrincipales.map(({ Icon, title, description, size }) => (
-              <div
-                key={title}
-                className="group bg-surface-container-low p-8 rounded-xl hover:bg-surface-container transition-all duration-300 relative overflow-hidden"
-              >
-                <div className="absolute -right-4 -top-4 text-primary/5">
-                  <ScrollText size={96} />
+            {documents.map((doc) => {
+              const Icon = iconMap[doc.icon] ?? ScrollText;
+              return (
+                <div
+                  key={doc.id}
+                  className="group bg-surface-container-low p-8 rounded-xl hover:bg-surface-container transition-all duration-300 relative overflow-hidden"
+                >
+                  <div className="absolute -right-4 -top-4 text-primary/5">
+                    <ScrollText size={96} />
+                  </div>
+                  <Icon size={36} className="text-primary mb-4" />
+                  <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
+                    {doc.title}
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mb-6 leading-snug">
+                    {doc.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-label text-outline">
+                      PDF • {doc.sizeMB}
+                    </span>
+                    <a
+                      href={doc.file}
+                      download
+                      aria-label={`Descargar ${doc.title}`}
+                      className="bg-primary text-on-primary p-3 rounded-full hover:scale-105 transition-transform flex items-center justify-center"
+                    >
+                      <Download size={18} />
+                    </a>
+                  </div>
                 </div>
-                <Icon size={36} className="text-primary mb-4" />
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  {title}
-                </h3>
-                <p className="text-on-surface-variant text-sm mb-6 leading-snug">
-                  {description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-label text-outline">{size}</span>
-                  <button
-                    type="button"
-                    aria-label={`Descargar ${title}`}
-                    className="bg-primary text-on-primary p-3 rounded-full hover:scale-105 transition-transform flex items-center justify-center"
-                  >
-                    <Download size={18} />
-                  </button>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Sidebar */}
@@ -123,22 +110,24 @@ export default function DocumentosLegalesPage() {
                 Informes Anuales
               </h3>
               <div className="space-y-4">
-                {informesAnuales.map((label) => (
+                {annualReports.map((report) => (
                   <div
-                    key={label}
+                    key={report.year}
                     className="flex items-center justify-between p-4 bg-surface rounded-2xl"
                   >
                     <div className="flex items-center gap-3">
                       <BarChart2 size={20} className="text-primary" />
-                      <span className="font-medium">{label}</span>
+                      <span className="font-medium">{report.label}</span>
                     </div>
-                    <button
-                      type="button"
-                      aria-label={`Ver ${label}`}
+                    <a
+                      href={report.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Ver ${report.label}`}
                       className="text-outline hover:text-primary transition-colors"
                     >
                       <Eye size={20} />
-                    </button>
+                    </a>
                   </div>
                 ))}
               </div>

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Juan Fernando Pulido Mendoza",
+    "role": "Director Ejecutivo & Co-fundador",
+    "photo": "/team/juan-fernando-pulido.jpg",
+    "bio": "Ingeniero ambiental con más de 20 años de experiencia en conservación de ecosistemas y desarrollo rural sostenible en la región de Santander."
+  },
+  {
+    "name": "Hernán Felipe Pulido Mendoza",
+    "role": "Director de Operaciones",
+    "photo": "/team/hernan-felipe-pulido.jpg",
+    "bio": "Especialista en gestión de proyectos de infraestructura social y coordinación comunitaria con enfoque en territorios rurales."
+  },
+  {
+    "name": "Blanca Estrella Mendoza Barajas",
+    "role": "Directora Administrativa",
+    "photo": "/team/blanca-estrella-mendoza.jpg",
+    "bio": "Contadora pública con especialización en entidades sin ánimo de lucro y gestión de recursos de cooperación internacional."
+  }
+]

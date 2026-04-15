@@ -1,0 +1,54 @@
+{
+  "nit": "902.012.150-0",
+  "documents": [
+    {
+      "id": "acta-constitucion",
+      "title": "Acta de Constitución",
+      "description": "Documento fundacional que establece el nacimiento jurídico de FUBIOSAI Foundation.",
+      "file": "/legal-docs/acta-constitucion.pdf",
+      "sizeMB": "2.4 MB",
+      "icon": "ScrollText"
+    },
+    {
+      "id": "estatutos",
+      "title": "Estatutos",
+      "description": "Reglas de gobernanza, objetivos sociales y estructura organizativa de la entidad.",
+      "file": "/legal-docs/estatutos.pdf",
+      "sizeMB": "1.8 MB",
+      "icon": "Scale"
+    },
+    {
+      "id": "certificado-existencia",
+      "title": "Certificado de Existencia",
+      "description": "Cámara de Comercio vigente que acredita la personería jurídica y representación legal.",
+      "file": "/legal-docs/certificado-existencia.pdf",
+      "sizeMB": "0.9 MB",
+      "icon": "BadgeCheck"
+    },
+    {
+      "id": "declaracion-renta",
+      "title": "Declaración de Renta",
+      "description": "Último ejercicio fiscal presentado ante la DIAN como parte del régimen tributario especial.",
+      "file": "/legal-docs/declaracion-renta.pdf",
+      "sizeMB": "3.2 MB",
+      "icon": "Landmark"
+    }
+  ],
+  "annualReports": [
+    {
+      "year": "2023",
+      "label": "Gestión 2023",
+      "file": "/legal-docs/informes/gestion-2023.pdf"
+    },
+    {
+      "year": "2022",
+      "label": "Gestión 2022",
+      "file": "/legal-docs/informes/gestion-2022.pdf"
+    },
+    {
+      "year": "2021",
+      "label": "Gestión 2021",
+      "file": "/legal-docs/informes/gestion-2021.pdf"
+    }
+  ]
+}

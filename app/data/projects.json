@@ -1,0 +1,92 @@
+[
+  {
+    "id": "infraestructura-vial",
+    "title": "Infraestructura vial con JAC",
+    "category": "Infraestructura Social",
+    "shortDescription": "Empoderamos a las Juntas de Acción Comunal para liderar el desarrollo de sus propias vías rurales.",
+    "fullDescription": "Trabajamos junto a las Juntas de Acción Comunal de los municipios del Cañón de Suaita para planificar, gestionar y ejecutar obras de infraestructura vial que conecten veredas y mejoren la calidad de vida de las comunidades rurales.",
+    "coverImage": "/projects/infraestructura-vial/cover.jpg",
+    "gallery": [
+      "/projects/infraestructura-vial/gallery-1.jpg",
+      "/projects/infraestructura-vial/gallery-2.jpg"
+    ],
+    "tags": ["Infraestructura", "Comunidad", "JAC"],
+    "stats": [
+      { "label": "Kilómetros intervenidos", "value": "38 km" },
+      { "label": "Veredas conectadas", "value": "12" },
+      { "label": "Familias beneficiadas", "value": "320" }
+    ]
+  },
+  {
+    "id": "geoceldas",
+    "title": "Geoceldas",
+    "category": "Tecnología Ambiental",
+    "shortDescription": "Tecnología de estabilización de suelos para terrenos difíciles, permitiendo accesibilidad sostenible.",
+    "fullDescription": "Implementamos sistemas de geoceldas para la estabilización y protección de taludes y vías en terrenos con alta pendiente, reduciendo la erosión y garantizando la durabilidad de las obras en zonas de difícil acceso.",
+    "coverImage": "/projects/geoceldas/cover.jpg",
+    "gallery": [
+      "/projects/geoceldas/gallery-1.jpg"
+    ],
+    "tags": ["Geoceldas", "Suelos", "Sostenible"],
+    "stats": [
+      { "label": "Metros cuadrados estabilizados", "value": "4.200 m²" },
+      { "label": "Taludes protegidos", "value": "18" }
+    ]
+  },
+  {
+    "id": "plantas-agua",
+    "title": "Plantas de agua potable móviles",
+    "category": "Agua y Saneamiento",
+    "shortDescription": "Llevamos agua segura a los rincones más remotos con sistemas modulares de alta eficiencia.",
+    "fullDescription": "Diseñamos e instalamos plantas de tratamiento de agua potable de carácter modular y móvil que pueden desplegarse en comunidades rurales sin acceso a acueducto, garantizando agua segura para consumo humano.",
+    "coverImage": "/projects/plantas-agua/cover.jpg",
+    "gallery": [
+      "/projects/plantas-agua/gallery-1.jpg",
+      "/projects/plantas-agua/gallery-2.jpg"
+    ],
+    "tags": ["Agua Potable", "Módular", "Rural"],
+    "stats": [
+      { "label": "Plantas instaladas", "value": "6" },
+      { "label": "Personas con agua segura", "value": "+12.000" },
+      { "label": "Litros tratados al día", "value": "45.000 L" }
+    ]
+  },
+  {
+    "id": "acuicultura",
+    "title": "Acuicultura tecnificada",
+    "category": "Soberanía Alimentaria",
+    "shortDescription": "Sistemas de producción acuícola con monitoreo IoT para garantizar la soberanía alimentaria y rentabilidad.",
+    "fullDescription": "Implementamos estanques de producción piscícola con sensores IoT de bajo costo para el monitoreo de temperatura, oxígeno disuelto y pH, permitiendo a las familias campesinas producir de forma eficiente y rentable.",
+    "coverImage": "/projects/acuicultura/cover.jpg",
+    "gallery": [
+      "/projects/acuicultura/gallery-1.jpg",
+      "/projects/acuicultura/gallery-2.jpg"
+    ],
+    "tags": ["IoT", "Acuicultura", "Sostenible", "Alimentario"],
+    "stats": [
+      { "label": "Familias productoras", "value": "24" },
+      { "label": "Toneladas producidas al año", "value": "8.4 t" },
+      { "label": "Especies cultivadas", "value": "3" }
+    ]
+  },
+  {
+    "id": "reforestacion",
+    "title": "Reforestación comunitaria",
+    "category": "Restauración Ecológica",
+    "shortDescription": "Restauramos ecosistemas degradados vinculando a las familias locales en la protección de los bosques nativos y fuentes hídricas.",
+    "fullDescription": "Programa de restauración de corredores biológicos en el Cañón de Suaita, donde las familias campesinas se convierten en guardianes de los bosques nativos a través de incentivos económicos y capacitación técnica en silvicultura y monitoreo de biodiversidad.",
+    "coverImage": "/projects/reforestacion/cover.jpg",
+    "gallery": [
+      "/projects/reforestacion/gallery-1.jpg",
+      "/projects/reforestacion/gallery-2.jpg",
+      "/projects/reforestacion/gallery-3.jpg"
+    ],
+    "tags": ["Reforestación", "Biodiversidad", "Corredor Biológico"],
+    "stats": [
+      { "label": "Hectáreas restauradas", "value": "150+" },
+      { "label": "Árboles nativos plantados", "value": "15.000+" },
+      { "label": "Especies nativas", "value": "42" },
+      { "label": "Familias guardianas", "value": "45" }
+    ]
+  }
+]
