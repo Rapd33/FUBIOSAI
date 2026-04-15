@@ -118,6 +118,7 @@ export default function SobreNosotrosPage() {
         </section>
 
         {/* ── Liderazgo ── */}
+        {/*
         <section className="px-8 max-w-7xl mx-auto mb-32">
           <div className="text-center mb-16">
             <h2 className="font-headline text-4xl font-bold text-primary mb-4 tracking-tight">
@@ -153,7 +154,8 @@ export default function SobreNosotrosPage() {
               </div>
             ))}
           </div>
-        </section>
+        </section> 
+        */}
 
         {/* ── CTA ── */}
         <section id="contacto" className="px-8 max-w-5xl mx-auto">

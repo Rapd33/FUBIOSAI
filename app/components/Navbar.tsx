@@ -19,12 +19,10 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(49,48,45,0.06)]">
-      <div className="flex justify-between items-center px-8 py-2 max-w-7xl mx-auto">
+      <div className="flex justify-between items-center px-8 py-1 max-w-7xl mx-auto">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <span className="text-2xl font-bold text-[#1B5E20] font-headline tracking-tight">
-            <Image src="/fubiosai-logo.svg" alt="FUBIOSAI Logo" height={64} width={64} style={{ height: "10div", width: "auto" }} />
-          </span>
+          <Image src="/fubiosai-logo.svg" alt="FUBIOSAI Logo" height={64} width={64} loading="eager" priority style={{ height: "96px", width: "auto" }} />
         </Link>
 
         {/* Desktop links */}
