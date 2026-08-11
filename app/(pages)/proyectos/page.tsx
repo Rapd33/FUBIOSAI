@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HardHat, Grid3X3, Droplets, ArrowRight, Leaf, Download } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { whatsappLink, whatsappMessages } from "../../lib/whatsapp";
 import type { Project } from "../../data/types";
 import projectsData from "../../data/projects.json";
 
@@ -202,12 +203,14 @@ export default function ProyectosPage() {
                 <p className="text-xl text-surface-container-lowest/90 mb-10 leading-relaxed">
                   {p5.shortDescription}
                 </p>
-                <Link
-                  href="/sobre-nosotros"
+                <a
+                  href={whatsappLink(whatsappMessages.voluntario)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block bg-white text-primary px-8 py-4 rounded-full font-headline font-bold hover:bg-secondary-fixed transition-colors"
                 >
                   Únete al cambio
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -247,12 +250,14 @@ export default function ProyectosPage() {
             la visión y la ejecución sostenible.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/sobre-nosotros#contacto"
+            <a
+              href={whatsappLink(whatsappMessages.presentarIniciativa)}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-10 py-4 organic-gradient text-white rounded-full font-headline font-bold text-lg shadow-lg"
             >
               Presentar Iniciativa
-            </Link>
+            </a>
             <Link
               href="/documentos-legales"
               className="px-10 py-4 bg-surface-container-highest text-primary rounded-full font-headline font-bold text-lg"

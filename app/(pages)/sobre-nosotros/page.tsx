@@ -2,16 +2,13 @@ import Link from "next/link";
 import { Leaf, Droplets, Users2 } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import type { TeamMember } from "../../data/types";
-import teamData from "../../data/team.json";
+import { whatsappLink, whatsappMessages } from "../../lib/whatsapp";
 
 export const metadata = {
   title: "Sobre Nosotros | FUBIOSAI",
   description:
-    "Conoce la historia, visión y equipo de FUBIOSAI — fundación nacida en Suaita, Santander, para la regeneración de ecosistemas y el fortalecimiento comunitario.",
+    "Conoce la historia y visión de FUBIOSAI — fundación nacida en Suaita, Santander, para la regeneración de ecosistemas y el fortalecimiento comunitario.",
 };
-
-const team: TeamMember[] = teamData;
 
 export default function SobreNosotrosPage() {
   return (
@@ -45,7 +42,7 @@ export default function SobreNosotrosPage() {
                 <img
                   className="w-full h-full object-cover"
                   alt="Paisaje verde de las montañas de Santander Colombia"
-                  src="/about/hero-landscape.jpg"
+                  src="/about/hero-landscape.png"
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-surface-container-highest p-8 rounded-xl shadow-xl hidden md:block max-w-60">
@@ -70,7 +67,7 @@ export default function SobreNosotrosPage() {
                   <img
                     className="rounded-xl shadow-lg w-full aspect-video object-cover"
                     alt="Vista aérea de un bosque tropical denso y saludable"
-                    src="/about/vision-forest.jpg"
+                    src="/about/vision-forest.png"
                   />
                   <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary-container rounded-full flex items-center justify-center border-8 border-surface-container-low">
                     <Leaf size={36} className="text-on-primary-container" />
@@ -117,46 +114,6 @@ export default function SobreNosotrosPage() {
           </div>
         </section>
 
-        {/* ── Liderazgo ── */}
-        {/*
-        <section className="px-8 max-w-7xl mx-auto mb-32">
-          <div className="text-center mb-16">
-            <h2 className="font-headline text-4xl font-bold text-primary mb-4 tracking-tight">
-              Nuestro Liderazgo
-            </h2>
-            <p className="text-on-surface-variant max-w-2xl mx-auto">
-              Un equipo multidisciplinario unido por el propósito de transformar
-              nuestra relación con la naturaleza.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="group">
-                <div className="bg-surface-container-high rounded-xl aspect-3/4 overflow-hidden mb-6 relative">
-                  <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                    alt={`Retrato de ${member.name}`}
-                    src={member.photo}
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <h3 className="font-headline font-bold text-xl text-primary">
-                  {member.name}
-                </h3>
-                <p className="text-on-surface-variant font-medium mb-2">
-                  {member.role}
-                </p>
-                {member.bio && (
-                  <p className="text-sm text-on-surface-variant/80 leading-relaxed">
-                    {member.bio}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </section> 
-        */}
-
         {/* ── CTA ── */}
         <section id="contacto" className="px-8 max-w-5xl mx-auto">
           <div className="bg-primary-container text-on-primary-container p-12 md:p-20 rounded-xl relative overflow-hidden text-center">
@@ -169,12 +126,14 @@ export default function SobreNosotrosPage() {
                 protección en el Cañón de Suaita.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  type="button"
+                <a
+                  href={whatsappLink(whatsappMessages.donar)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-surface text-primary px-8 py-4 rounded-full font-headline font-bold hover:bg-surface-bright transition-all shadow-lg"
                 >
                   Hacer una Donación
-                </button>
+                </a>
                 <Link
                   href="/proyectos"
                   className="border border-on-primary-container/30 text-on-primary-container px-8 py-4 rounded-full font-headline font-bold hover:bg-on-primary-container/10 transition-all"

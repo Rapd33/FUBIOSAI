@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { whatsappLink, whatsappMessages } from "../lib/whatsapp";
 
 export default function InicioPage() {
   return (
@@ -32,8 +33,10 @@ export default function InicioPage() {
                 arquitecturas en armonía con la vida.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/sobre-nosotros"
+                <a
+                  href={whatsappLink(whatsappMessages.voluntario)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-4 bg-linear-to-r from-primary to-primary-container text-on-primary rounded-xl font-headline font-bold text-lg hover:shadow-xl transition-all flex items-center gap-3 group"
                 >
                   Unirse como Voluntario
@@ -41,7 +44,7 @@ export default function InicioPage() {
                     size={20}
                     className="group-hover:translate-x-1 transition-transform"
                   />
-                </Link>
+                </a>
                 <Link
                   href="/proyectos"
                   className="px-8 py-4 bg-surface-container text-primary rounded-xl font-headline font-bold text-lg hover:bg-surface-container-high transition-all"
@@ -253,18 +256,22 @@ export default function InicioPage() {
               Sé parte de la regeneración de nuestro hogar.
             </h2>
             <div className="flex flex-wrap justify-center gap-6">
-              <Link
-                href="/sobre-nosotros#contacto"
+              <a
+                href={whatsappLink(whatsappMessages.donar)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-10 py-5 bg-on-primary-container text-primary-container rounded-full font-headline font-extrabold text-xl hover:scale-105 transition-transform shadow-xl"
               >
                 Haz una Donación
-              </Link>
-              <Link
-                href="/sobre-nosotros"
+              </a>
+              <a
+                href={whatsappLink(whatsappMessages.voluntario)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-10 py-5 bg-transparent border-2 border-on-primary-container text-on-primary-container rounded-full font-headline font-extrabold text-xl hover:bg-on-primary-container hover:text-primary-container transition-all"
               >
                 Quiero ser Voluntario
-              </Link>
+              </a>
             </div>
           </div>
         </section>

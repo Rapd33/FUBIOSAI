@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
+import { whatsappLink, whatsappMessages } from "../lib/whatsapp";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -47,13 +48,15 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-4">
-          <Link
-            href="/sobre-nosotros#contacto"
+          <a
+            href={whatsappLink(whatsappMessages.donar)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-2.5 bg-linear-to-r from-primary to-primary-container text-on-primary rounded-full font-headline font-medium text-sm hover:shadow-lg transition-all active:scale-95 flex items-center gap-2"
           >
             Donar
             <ArrowRight size={14} />
-          </Link>
+          </a>
           <button
             className="md:hidden text-on-surface p-1"
             onClick={() => setMobileOpen(!mobileOpen)}

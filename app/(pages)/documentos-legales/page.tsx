@@ -11,9 +11,9 @@ import {
   Download,
   type LucideIcon,
 } from "lucide-react";
-import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { whatsappLink, whatsappMessages } from "../../lib/whatsapp";
 import type { LegalDocument, AnnualReport } from "../../data/types";
 import legalData from "../../data/legal-docs.json";
 
@@ -109,7 +109,8 @@ export default function DocumentosLegalesPage() {
 
           {/* Sidebar */}
           <div className="md:col-span-4 flex flex-col gap-6">
-            {/* Informes anuales */}
+            {/* Informes anuales — oculto hasta que haya archivos reales que mostrar */}
+            {/*
             <div className="bg-surface-container-highest p-8 rounded-xl">
               <h3 className="text-2xl font-headline font-bold text-primary mb-6">
                 Informes Anuales
@@ -143,6 +144,7 @@ export default function DocumentosLegalesPage() {
                 Ver todos los archivos
               </button>
             </div>
+            */}
 
             {/* CTA card */}
             <div className="organic-gradient p-8 rounded-xl text-on-primary relative overflow-hidden group">
@@ -154,12 +156,14 @@ export default function DocumentosLegalesPage() {
                   Si requieres certificaciones específicas o documentos no
                   listados aquí, contáctanos directamente.
                 </p>
-                <Link
-                  href="/sobre-nosotros#contacto"
+                <a
+                  href={whatsappLink(whatsappMessages.documentosLegales)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-surface text-primary px-6 py-2 rounded-full font-bold hover:bg-secondary-fixed transition-colors inline-block"
                 >
                   Escríbenos
-                </Link>
+                </a>
               </div>
               <div className="absolute -bottom-8 -right-8 opacity-20 transform group-hover:scale-110 transition-transform duration-700">
                 <ShieldCheck size={160} />

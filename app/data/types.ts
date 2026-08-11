@@ -12,14 +12,6 @@ export interface Project {
   datasheet?: string; // ruta relativa a public/, ficha técnica en PDF
 }
 
-// ── Equipo ─────────────────────────────────────────────────
-export interface TeamMember {
-  name: string;
-  role: string;
-  photo: string;
-  bio?: string;
-}
-
 // ── Documentos Legales ─────────────────────────────────────
 export interface LegalDocument {
   id: string;
