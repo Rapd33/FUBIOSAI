@@ -9,6 +9,7 @@ export interface Project {
   gallery: string[];
   tags: string[];
   stats?: { label: string; value: string }[];
+  datasheet?: string; // ruta relativa a public/, ficha técnica en PDF
 }
 
 // ── Equipo ─────────────────────────────────────────────────

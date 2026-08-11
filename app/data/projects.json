@@ -15,7 +15,8 @@
       { "label": "Kilómetros intervenidos", "value": "38 km" },
       { "label": "Veredas conectadas", "value": "12" },
       { "label": "Familias beneficiadas", "value": "320" }
-    ]
+    ],
+    "datasheet": "/projects/ficha-infraestructura-vial-geoceldas.pdf"
   },
   {
     "id": "geoceldas",
@@ -31,7 +32,8 @@
     "stats": [
       { "label": "Metros cuadrados estabilizados", "value": "4.200 m²" },
       { "label": "Taludes protegidos", "value": "18" }
-    ]
+    ],
+    "datasheet": "/projects/ficha-infraestructura-vial-geoceldas.pdf"
   },
   {
     "id": "plantas-agua",

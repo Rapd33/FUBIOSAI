@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HardHat, Grid3X3, Droplets, ArrowRight, Leaf } from "lucide-react";
+import { HardHat, Grid3X3, Droplets, ArrowRight, Leaf, Download } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import type { Project } from "../../data/types";
@@ -80,12 +80,23 @@ export default function ProyectosPage() {
                   <p className="max-w-md text-surface-container-low/80 mb-6">
                     {p1.shortDescription}
                   </p>
-                  <button
-                    type="button"
-                    className="flex items-center gap-2 font-bold hover:gap-4 transition-all"
-                  >
-                    Explorar impacto <ArrowRight size={18} />
-                  </button>
+                  <div className="flex items-center gap-6">
+                    <button
+                      type="button"
+                      className="flex items-center gap-2 font-bold hover:gap-4 transition-all"
+                    >
+                      Explorar impacto <ArrowRight size={18} />
+                    </button>
+                    {p1.datasheet && (
+                      <a
+                        href={p1.datasheet}
+                        download
+                        className="flex items-center gap-2 font-bold text-sm text-white/80 hover:text-white transition-colors"
+                      >
+                        <Download size={16} /> Ficha técnica
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,9 +110,18 @@ export default function ProyectosPage() {
                 <h3 className="font-headline text-2xl font-bold text-primary mb-4">
                   {p2.title}
                 </h3>
-                <p className="text-on-surface-variant leading-relaxed">
+                <p className="text-on-surface-variant leading-relaxed mb-4">
                   {p2.shortDescription}
                 </p>
+                {p2.datasheet && (
+                  <a
+                    href={p2.datasheet}
+                    download
+                    className="inline-flex items-center gap-2 font-bold text-sm text-primary hover:underline"
+                  >
+                    <Download size={16} /> Ficha técnica
+                  </a>
+                )}
               </div>
               <div className="mt-8">
                 <img
@@ -227,12 +247,12 @@ export default function ProyectosPage() {
             la visión y la ejecución sostenible.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button
-              type="button"
+            <Link
+              href="/sobre-nosotros#contacto"
               className="px-10 py-4 organic-gradient text-white rounded-full font-headline font-bold text-lg shadow-lg"
             >
               Presentar Iniciativa
-            </button>
+            </Link>
             <Link
               href="/documentos-legales"
               className="px-10 py-4 bg-surface-container-highest text-primary rounded-full font-headline font-bold text-lg"

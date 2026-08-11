@@ -6,7 +6,7 @@
       "title": "Acta de Constitución",
       "description": "Documento fundacional que establece el nacimiento jurídico de FUBIOSAI Foundation.",
       "file": "/legal-docs/acta-constitucion.pdf",
-      "sizeMB": "2.4 MB",
+      "sizeMB": "0.1 MB",
       "icon": "ScrollText"
     },
     {
@@ -14,7 +14,7 @@
       "title": "Estatutos",
       "description": "Reglas de gobernanza, objetivos sociales y estructura organizativa de la entidad.",
       "file": "/legal-docs/estatutos.pdf",
-      "sizeMB": "1.8 MB",
+      "sizeMB": "0.3 MB",
       "icon": "Scale"
     },
     {
@@ -32,6 +32,22 @@
       "file": "/legal-docs/declaracion-renta.pdf",
       "sizeMB": "3.2 MB",
       "icon": "Landmark"
+    },
+    {
+      "id": "rut",
+      "title": "RUT",
+      "description": "Registro Único Tributario ante la DIAN que identifica a FUBIOSAI como entidad del régimen tributario especial.",
+      "file": "/legal-docs/rut.pdf",
+      "sizeMB": "0.3 MB",
+      "icon": "Receipt"
+    },
+    {
+      "id": "plan-estrategico",
+      "title": "Plan Estratégico",
+      "description": "Hoja de ruta institucional con los objetivos y ejes de acción de FUBIOSAI.",
+      "file": "/legal-docs/plan-estrategico.pdf",
+      "sizeMB": "0.5 MB",
+      "icon": "Target"
     }
   ],
   "annualReports": [

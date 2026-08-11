@@ -253,12 +253,12 @@ export default function InicioPage() {
               Sé parte de la regeneración de nuestro hogar.
             </h2>
             <div className="flex flex-wrap justify-center gap-6">
-              <button
-                type="button"
+              <Link
+                href="/sobre-nosotros#contacto"
                 className="px-10 py-5 bg-on-primary-container text-primary-container rounded-full font-headline font-extrabold text-xl hover:scale-105 transition-transform shadow-xl"
               >
                 Haz una Donación
-              </button>
+              </Link>
               <Link
                 href="/sobre-nosotros"
                 className="px-10 py-5 bg-transparent border-2 border-on-primary-container text-on-primary-container rounded-full font-headline font-extrabold text-xl hover:bg-on-primary-container hover:text-primary-container transition-all"

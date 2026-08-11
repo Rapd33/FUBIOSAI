@@ -3,12 +3,15 @@ import {
   Scale,
   BadgeCheck,
   Landmark,
+  Receipt,
+  Target,
   BarChart2,
   Eye,
   ShieldCheck,
   Download,
   type LucideIcon,
 } from "lucide-react";
+import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import type { LegalDocument, AnnualReport } from "../../data/types";
@@ -25,6 +28,8 @@ const iconMap: Record<string, LucideIcon> = {
   Scale,
   BadgeCheck,
   Landmark,
+  Receipt,
+  Target,
 };
 
 const documents: LegalDocument[] = legalData.documents;
@@ -149,12 +154,12 @@ export default function DocumentosLegalesPage() {
                   Si requieres certificaciones específicas o documentos no
                   listados aquí, contáctanos directamente.
                 </p>
-                <button
-                  type="button"
-                  className="bg-surface text-primary px-6 py-2 rounded-full font-bold hover:bg-secondary-fixed transition-colors"
+                <Link
+                  href="/sobre-nosotros#contacto"
+                  className="bg-surface text-primary px-6 py-2 rounded-full font-bold hover:bg-secondary-fixed transition-colors inline-block"
                 >
                   Escríbenos
-                </button>
+                </Link>
               </div>
               <div className="absolute -bottom-8 -right-8 opacity-20 transform group-hover:scale-110 transition-transform duration-700">
                 <ShieldCheck size={160} />
