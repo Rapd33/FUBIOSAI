@@ -68,7 +68,7 @@ export default function InicioPage() {
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary-container rounded-full opacity-40 blur-3xl -z-10" />
-              <div className="absolute top-1/2 -right-12 p-6 bg-surface-container-lowest/90 backdrop-blur-md rounded-xl shadow-[0_20px_40px_rgba(49,48,45,0.06)] max-w-50">
+              <div className="absolute top-1/2 right-2 md:-right-12 p-4 md:p-6 bg-surface-container-lowest/90 backdrop-blur-md rounded-xl shadow-[0_20px_40px_rgba(49,48,45,0.06)] max-w-40 md:max-w-50">
                 <p className="font-headline font-bold text-primary text-3xl mb-1">
                   +15k
                 </p>

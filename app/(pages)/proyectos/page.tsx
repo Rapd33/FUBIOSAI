@@ -179,7 +179,7 @@ export default function ProyectosPage() {
 
             {/* P4: Acuicultura — split texto/imagen */}
             <div className="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low p-1">
-              <div className="relative h-100 rounded-xl overflow-hidden flex flex-col md:flex-row">
+              <div className="relative h-auto md:h-100 rounded-xl overflow-hidden flex flex-col md:flex-row">
                 <div className="md:w-1/2 p-10 bg-white flex flex-col justify-center">
                   <h3 className="font-headline text-3xl font-bold text-primary mb-4">
                     {p4.title}
@@ -198,7 +198,7 @@ export default function ProyectosPage() {
                     ))}
                   </div>
                 </div>
-                <div className="md:w-1/2 relative overflow-hidden">
+                <div className="md:w-1/2 relative h-64 md:h-auto overflow-hidden">
                   <img
                     alt={p4.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
