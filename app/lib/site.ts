@@ -15,4 +15,4 @@ export const DEFAULT_OG_IMAGE = {
 
 export const ORG_NIT = "902.012.150-0";
 export const ORG_LOCATION = "Suaita, Santander, Colombia";
-export const ORG_WHATSAPP = "+573229720210";
+export const ORG_WHATSAPP = "+573171594271";

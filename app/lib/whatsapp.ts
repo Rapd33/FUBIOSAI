@@ -1,7 +1,8 @@
-const WHATSAPP_NUMBER = "573229720210";
+import { ORG_WHATSAPP } from "./site";
 
 export function whatsappLink(message: string): string {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  const number = ORG_WHATSAPP.replace(/\D/g, "");
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
 export const whatsappMessages = {
