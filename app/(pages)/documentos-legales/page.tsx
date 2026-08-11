@@ -11,16 +11,30 @@ import {
   Download,
   type LucideIcon,
 } from "lucide-react";
+import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { whatsappLink, whatsappMessages } from "../../lib/whatsapp";
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from "../../lib/site";
 import type { LegalDocument, AnnualReport } from "../../data/types";
 import legalData from "../../data/legal-docs.json";
 
-export const metadata = {
-  title: "Documentos Legales | FUBIOSAI",
-  description:
-    "Repositorio de documentos legales y financieros de FUBIOSAI — transparencia institucional como Entidad Sin Ánimo de Lucro.",
+const description =
+  "Repositorio de documentos legales y financieros de FUBIOSAI — transparencia institucional como Entidad Sin Ánimo de Lucro.";
+
+export const metadata: Metadata = {
+  title: "Documentos Legales",
+  description,
+  alternates: { canonical: "/documentos-legales" },
+  openGraph: {
+    title: "Documentos Legales | FUBIOSAI",
+    description,
+    url: `${SITE_URL}/documentos-legales`,
+    siteName: SITE_NAME,
+    images: [DEFAULT_OG_IMAGE],
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 const iconMap: Record<string, LucideIcon> = {

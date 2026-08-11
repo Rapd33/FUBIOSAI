@@ -1,15 +1,36 @@
 import Link from "next/link";
 import { HardHat, Grid3X3, Droplets, ArrowRight, Leaf, Download } from "lucide-react";
+import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { whatsappLink, whatsappMessages } from "../../lib/whatsapp";
+import { SITE_URL, SITE_NAME } from "../../lib/site";
 import type { Project } from "../../data/types";
 import projectsData from "../../data/projects.json";
 
-export const metadata = {
-  title: "Proyectos | FUBIOSAI",
-  description:
-    "Iniciativas de FUBIOSAI: infraestructura vial, geoceldas, plantas de agua potable, acuicultura y reforestación comunitaria.",
+const description =
+  "Iniciativas de FUBIOSAI: infraestructura vial, geoceldas, plantas de agua potable, acuicultura y reforestación comunitaria.";
+
+export const metadata: Metadata = {
+  title: "Proyectos",
+  description,
+  alternates: { canonical: "/proyectos" },
+  openGraph: {
+    title: "Proyectos | FUBIOSAI",
+    description,
+    url: `${SITE_URL}/proyectos`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: "/projects/infraestructura-vial/cover.png",
+        width: 2752,
+        height: 1536,
+        alt: "Infraestructura vial rural construida con Juntas de Acción Comunal",
+      },
+    ],
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 const projects: Project[] = projectsData;

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -10,6 +11,10 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { whatsappLink, whatsappMessages } from "../lib/whatsapp";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function InicioPage() {
   return (

@@ -1,13 +1,34 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Leaf, Droplets, Users2 } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { whatsappLink, whatsappMessages } from "../../lib/whatsapp";
+import { SITE_URL, SITE_NAME } from "../../lib/site";
 
-export const metadata = {
-  title: "Sobre Nosotros | FUBIOSAI",
-  description:
-    "Conoce la historia y visión de FUBIOSAI — fundación nacida en Suaita, Santander, para la regeneración de ecosistemas y el fortalecimiento comunitario.",
+const description =
+  "Conoce la historia y visión de FUBIOSAI — fundación nacida en Suaita, Santander, para la regeneración de ecosistemas y el fortalecimiento comunitario.";
+
+export const metadata: Metadata = {
+  title: "Sobre Nosotros",
+  description,
+  alternates: { canonical: "/sobre-nosotros" },
+  openGraph: {
+    title: "Sobre Nosotros | FUBIOSAI",
+    description,
+    url: `${SITE_URL}/sobre-nosotros`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: "/about/vision-forest.png",
+        width: 2752,
+        height: 1536,
+        alt: "Vista aérea de bosque tropical denso en Santander, Colombia",
+      },
+    ],
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 export default function SobreNosotrosPage() {
